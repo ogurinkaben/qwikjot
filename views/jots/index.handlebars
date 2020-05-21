@@ -1,0 +1,66 @@
+<div class="container mt-5">
+
+    <!--Section: Content-->
+    <section class="">
+
+        <!-- Section heading -->
+
+        {{#if jots}}
+            <h3 class="text-center font-weight-bold mb-5"> Jots </h3>
+        {{else}}
+            <h3 class="text-center font-weight-bold mb-5"> No Jots</h3>
+        {{/if}}
+
+        <!-- Grid row -->
+        <div class="row">
+            {{#each jots}}
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
+                    <!-- Card -->
+                    <div class="card hoverable">
+
+                        <!-- Card image -->
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <a href="#!" class="black-text">{{title}}</a>
+                            <!-- Text -->
+                            <p class="card-title text-muted font-small mt-3 mb-2">{{details}}</p>
+                            <!-- Interactions -->
+                            <div class="social-buttons">
+                                <!--Edit-->
+                                <a href="/jots/edit/{{_id}}" class="btn btn-sm btn-info my-0">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+
+                                <!--Delete-->
+                                <form method="POST" action="/jots/{{_id}}?_method=DELETE" class="d-inline">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-sm btn-danger my-0">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+
+                                </form>
+                            </div>
+                            <!-- Interactions -->
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Grid column -->
+            {{else}}
+                <div class="col-lg-12 col-md-12 mb-lg-0 mb-4">
+                    <h3 class="text-center font-weight-bold mb-5">...</h3>
+                </div>
+            {{/each}}
+
+    </section>
+    <!--Section: Content-->
+
+</div>

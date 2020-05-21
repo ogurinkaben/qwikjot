@@ -1,0 +1,30 @@
+html,
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+	border-radius: 3rem;
+	font-size: 14px;
+}
+
+label,
+.form-control {
+	font-size: 15px;
+}
+
+.navbar-brand {
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.navbar .dropdown-menu a,
+.nav-link {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.dropdown-menu {
+	border: none;
+	box-shadow: 0 10px 53px rgba(0, 0, 0, 0.15);
+}

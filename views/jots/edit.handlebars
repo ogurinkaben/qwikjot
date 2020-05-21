@@ -1,0 +1,55 @@
+  {{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+{{msg}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{else}}
+
+  {{/each}}
+  <div class="container p-3 z-depth-1">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!-- Default form subscription -->
+          <form class="text-center" action="/jots/{{jot._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+            <p class="h4 mb-4">Edit your Qwik Jot</p>
+
+            <p>Join our mailing list. We write rarely, but only the best content.</p>
+
+            <!-- Name -->
+            <input type="text" value="{{jot.title}}" name="title" class="form-control mb-4" placeholder="Title" >
+
+            <!-- Email -->
+            <textarea name="details" class="form-control mb-4" placeholder="Details" >{{jot.details}}</textarea>
+
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block" type="submit">Update</button>
+
+
+          </form>
+          <!-- Default form subscription -->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
