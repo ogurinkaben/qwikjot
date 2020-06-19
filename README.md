@@ -24,4 +24,4 @@ Copy the following code and paste in your database.js file (Use your database co
 ```
 
 ### Start server
-```npm run dev```
+```npm run start```
